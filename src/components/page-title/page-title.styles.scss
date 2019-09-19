@@ -1,0 +1,10 @@
+.page-title {
+    writing-mode: vertical-lr;
+    text-orientation: sideways;
+    font-size: 5rem;
+
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+}

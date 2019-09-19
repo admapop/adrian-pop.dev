@@ -1,0 +1,13 @@
+.social-container {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+
+    a {
+        img {
+            height: 50px;
+            padding: 2rem;
+        }
+    }
+}
