@@ -7,9 +7,9 @@ import './work.styles.scss'
 
 const Work = ({ match }) => {
   return (
-    <div>
-      <PageTitle title={match.url.substring(1).toUpperCase()} />
-      <div className='work-page'>
+    <div className='work-page'>
+      <PageTitle location={match} title={match.url.substring(1).toUpperCase()} />
+      <div className='work-container'>
         <WorkElement element='work0' number={'00'} title={'BURGEZ - New Website'} img={require("../../assets/projects/BURGEZ Website.jpg")} link={'Link'}>
           <h2>Design & Development</h2>
           <h3>August 2019</h3>
