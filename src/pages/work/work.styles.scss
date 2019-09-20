@@ -1,51 +1,62 @@
 .work-page {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-    "work0 work1 work2";
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    width: 60vw;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-    .work0,.work1,.work2 {
+    .work-container {
         display: grid;
-        grid-template-rows: 1fr 2fr 2fr 2fr 3fr 1fr;
-        grid-template-areas: 
-        "number"
-        "title"
-        "."
-        "photo"
-        "description"
-        "link";
-        border-left: 2px solid black;
-        &:last-child {
-            border-right: 2px solid black;
-        }
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "work0 work1 work2";
 
-        .project-number {
-            grid-area: number;
-        }
-        .title {
-            grid-area: title;
-        }
-        .photo {
-            grid-area: photo;
-            display: flex;
-            justify-content: center;
-            img {
-                width: 300px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 65vw;
+        height: 100vh;
+
+        .work0,
+        .work1,
+        .work2 {
+            display: grid;
+            grid-template-rows: 0.5fr 0.8fr 0.25fr 2fr 2.5fr 0.5fr;
+            grid-template-areas:
+                "number"
+                "title"
+                "."
+                "photo"
+                "description"
+                "link";
+            border-left: 2px solid black;
+            padding: 0 20px;
+
+            &:last-child {
+                border-right: 2px solid black;
             }
-        }
-        .description {
-            grid-area: description;
-        }
-        .link {
-            grid-area: link;
+
+            .project-number {
+                grid-area: number;
+            }
+            .title {
+                grid-area: title;
+            }
+            .photo {
+                grid-area: photo;
+                display: flex;
+                justify-content: center;
+                img {
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+            .description {
+                grid-area: description;
+            }
+            .link {
+                grid-area: link;
+            }
         }
     }
 }
