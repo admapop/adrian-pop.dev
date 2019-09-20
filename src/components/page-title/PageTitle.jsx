@@ -23,7 +23,6 @@ const Title = posed.div({
 
 const PageTitle = ({title, location}) => {
   const [visible, setVisible] = useState(false)
-  let currentLocation = location
 
   useEffect(() => {
     setVisible(true)
@@ -41,9 +40,6 @@ const PageTitle = ({title, location}) => {
         </Title>)
       }
     </PoseGroup>
-    // <div className='page-title'>
-    //   {title}
-    // </div>
   )
 }
 

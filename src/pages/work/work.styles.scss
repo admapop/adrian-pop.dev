@@ -21,7 +21,7 @@
         .work1,
         .work2 {
             display: grid;
-            grid-template-rows: 1fr 2fr 1fr 3fr 3fr 1fr;
+            grid-template-rows: 0.5fr 0.8fr 0.25fr 2fr 2.5fr 0.5fr;
             grid-template-areas:
                 "number"
                 "title"
@@ -30,6 +30,8 @@
                 "description"
                 "link";
             border-left: 2px solid black;
+            padding: 0 20px;
+
             &:last-child {
                 border-right: 2px solid black;
             }

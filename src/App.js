@@ -29,7 +29,7 @@ function App() {
           <Tag />
           <Tag date />
           <PoseGroup>
-            <RouteContainer key={location.key}>
+            <RouteContainer key={location.pathname}>
               <Switch location={location}>
                 <Route exact path='/' component={Landing} />
                 <Route exact path='/about' component={About} />
