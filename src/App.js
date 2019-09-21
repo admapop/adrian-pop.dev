@@ -10,6 +10,7 @@ import Home from './components/navigation/Home';
 import About from './pages/about/About';
 import Landing from './pages/landing/Landing';
 import Work from './pages/work/Work';
+import Contact from './pages/contact/Contact';
 
 import './App.css';
 
@@ -34,6 +35,7 @@ function App() {
                 <Route exact path='/' component={Landing} />
                 <Route exact path='/about' component={About} />
                 <Route exact path='/work' component={Work} />
+                <Route exact path='/contact' component={Contact} />
               </Switch>
             </RouteContainer>
           </PoseGroup>
