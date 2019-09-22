@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import PageTitle from '../../components/page-title/PageTitle';
 
 import './contact.styles.scss'
+import SocialBar from '../../components/social/SocialBar';
 
 const encode = (data) => {
   const formData = new FormData();
@@ -70,6 +71,7 @@ export default class Contact extends Component {
           <p>If you prefer to contact me directly, send your Email to:</p>
           <p>You can also check out my résumé.</p>
         </div>
+          <SocialBar mobile={true} location={match.url} />
       </div>
     )
   }

@@ -15,8 +15,23 @@
         pointer-events: none;
         user-select: none;
         
-        h2 {
+        .default {
             margin: 2rem 0;
         }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .landing-element {
+        .mobile {
+            margin-top: 10vh;
+            font-size: 4vw;
+        }
+    }
+}
+
+@media only screen and (min-width: 901px) {
+    .mobile {
+        display: none;
     }
 }

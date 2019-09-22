@@ -11,3 +11,26 @@
         }
     }
 }
+
+.contact-mobile {
+    display: none;
+    justify-content: space-between;
+    // position: fixed;
+    bottom: 0;
+
+    a {
+        img {
+            height: 50px;
+            padding: 2rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .social-container {
+        display: none;
+    }
+    .contact-mobile {
+        display: flex;
+    }
+}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Breakpoint } from 'react-socks'
 
 import './landing.styles.scss'
 
@@ -18,7 +19,12 @@ export default class Landing extends Component {
       <div className='landing-page'>
         <canvas className='canvas'></canvas>
         <div className='landing-element'>
-          <h2>Pssst. Click and drag below!</h2>
+          <Breakpoint desktop only>
+            <h2 className='default'>Pssst. Click and drag below!</h2>
+          </Breakpoint>
+          <Breakpoint desktop down>
+            <h2 className='mobile'>Pssst. Touch and drag below!</h2>
+          </Breakpoint>
         </div>
       </div>
     )

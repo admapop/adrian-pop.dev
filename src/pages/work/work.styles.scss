@@ -56,6 +56,76 @@
             }
             .link {
                 grid-area: link;
+                a {
+                    color: inherit;
+                    position: relative;
+                    text-decoration: none;
+                    font-weight: 700;
+                }
+                a::before {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    width: 100%;
+                    height: 2px;
+                    background-color: #bbbbbb;
+                    transform-origin: center;
+                    transform: translate(-50%, 0) scaleX(0);
+                    transition: transform 0.3s ease-in-out;
+                }
+
+                a:hover::before {
+                    transform: translate(-50%, 0) scaleX(1);
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .work-page {
+        .work-container {
+            grid-auto-flow: column;
+            grid-template-columns: 100%;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas:
+            "number"
+            "title"
+            "photo"
+            "description"
+            "link";
+
+            width: 80vw;
+
+            .work0,
+            .work1,
+            .work2 {
+                grid-template-rows: auto auto auto auto auto;
+                border-left: unset;
+                border-bottom: 2px solid black;
+                padding: 20px;
+
+                &:first-child {
+                    padding-top: 6rem;
+                }
+
+                &:last-child {
+                    border-right: unset;
+                    border-bottom: unset;
+                    padding-bottom: 5rem;
+                }
+
+                .photo {
+                    grid-area: photo;
+                    display: flex;
+                    justify-content: center;
+                    img {
+                        width: 100%;
+                        height: auto;
+                        object-fit: contain;
+                    }
+                }
             }
         }
     }

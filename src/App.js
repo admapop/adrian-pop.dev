@@ -6,6 +6,7 @@ import SocialBar from './components/social/SocialBar';
 import Navbar from './components/navigation/Navbar';
 import Tag from './components/page-tags/Tag';
 import Home from './components/navigation/Home';
+import { BreakpointProvider, setDefaultBreakpoints } from 'react-socks';
 
 import About from './pages/about/About';
 import Landing from './pages/landing/Landing';
@@ -14,6 +15,11 @@ import Contact from './pages/contact/Contact';
 
 import './App.css';
 
+setDefaultBreakpoints([
+  { mobile: 400 },
+  { desktop: 1025 }
+])
+
 const RouteContainer = posed.div({
   enter: { opacity: 1, delay: 300, beforeChildren: true },
   exit: { opacity: 0 }
@@ -21,11 +27,12 @@ const RouteContainer = posed.div({
 
 function App() {
   return (
+    <BreakpointProvider>
     <Route
       render={({ location }) => (
         <div className="App">
           <Home />
-          <SocialBar />
+          <SocialBar mobile={false} />
           <Navbar />
           <Tag />
           <Tag date />
@@ -42,6 +49,7 @@ function App() {
         </div>
       )}
     />
+    </BreakpointProvider>
   )
 }
 
