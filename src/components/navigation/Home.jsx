@@ -5,9 +5,11 @@ import './home.styles.scss'
 
 const Home = () => {
   return (
-    <div className='home'>
-      <Link to='/'>Adrian Pop</Link>
-    </div>
+    // <div className='home'>
+    //   <Link to='/'>Adrian Pop</Link>
+    // </div>
+    <Link className='home' to='/'>Adrian Pop</Link>
+
   )
 }
 
