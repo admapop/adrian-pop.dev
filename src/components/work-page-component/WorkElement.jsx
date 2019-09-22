@@ -8,7 +8,7 @@ const WorkElement = ({ element, number, title, img, linkTitle, link, children, r
       <div className='photo'><img src={img} alt="project" ref={reference} /></div>
       <div className='description'>{children}</div>
       <div className='link'>
-        <a href={link} target='_blank'>{linkTitle}</a>
+        <a href={link} target='_blank' rel="noopener noreferrer">{linkTitle}</a>
       </div>
     </div>
   )
