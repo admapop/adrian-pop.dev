@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Breakpoint } from 'react-socks'
+import { ShowAt } from 'react-with-breakpoints';
 
 import './landing.styles.scss'
 
@@ -19,12 +19,12 @@ export default class Landing extends Component {
       <div className='landing-page'>
         <canvas className='canvas'></canvas>
         <div className='landing-element'>
-          <Breakpoint desktop only>
+          <ShowAt breakpoint='large'>
             <h2 className='desktop'>Pssst. Click and drag below!</h2>
-          </Breakpoint>
-          <Breakpoint desktop down>
+          </ShowAt>
+          <ShowAt breakpoint='mediumAndBelow'>
             <h2 className='mobile'>Pssst. Touch and drag below!</h2>
-          </Breakpoint>
+          </ShowAt>
         </div>
       </div>
     )

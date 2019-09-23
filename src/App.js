@@ -6,7 +6,7 @@ import SocialBar from './components/social/SocialBar';
 import Navbar from './components/navigation/Navbar';
 import Tag from './components/page-tags/Tag';
 import Home from './components/navigation/Home';
-import { BreakpointProvider, Breakpoint, setDefaultBreakpoints } from 'react-socks';
+import { ShowAt } from 'react-with-breakpoints';
 import Headroom from 'react-headroom'
 
 import About from './pages/about/About';
@@ -16,12 +16,6 @@ import Contact from './pages/contact/Contact';
 
 import './App.css';
 
-setDefaultBreakpoints([
-  { mobile: 0 },
-  { xlmobile: 500 },
-  { desktop: 1025 }
-])
-
 const RouteContainer = posed.div({
   enter: { opacity: 1, delay: 300, beforeChildren: true },
   exit: { opacity: 0 }
@@ -29,18 +23,17 @@ const RouteContainer = posed.div({
 
 function App() {
   return (
-    <BreakpointProvider>
     <Route
       render={({ location }) => (
         <div className="App">
-          <Breakpoint xlmobile down>
+          <ShowAt breakpoint='mediumAndBelow'>
             <Headroom wrapperStyle={{textAlign: 'center', paddingTop: '2rem'}}>
               <Home />
             </Headroom>
-          </Breakpoint>
-          <Breakpoint desktop only>
+          </ShowAt>
+          <ShowAt breakpoint='largeAndAbove'>
             <Home />
-          </Breakpoint>
+          </ShowAt>
           <SocialBar mobile={false} />
           <Navbar />
           <Tag />
@@ -58,7 +51,6 @@ function App() {
         </div>
       )}
     />
-    </BreakpointProvider>
   )
 }
 
