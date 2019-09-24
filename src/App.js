@@ -14,6 +14,8 @@ import Landing from './pages/landing/Landing';
 import Work from './pages/work/Work';
 import Contact from './pages/contact/Contact';
 
+import logo from './assets/og_image.png'
+
 import './App.css';
 
 const RouteContainer = posed.div({
