@@ -8,8 +8,6 @@ export default class Landing extends Component {
   componentDidMount() {
     const script = document.createElement('script')
     script.src = '/fluid.js'
-    // script.async = true
-    // script.onload = () => this.scriptLoaded()
 
     document.body.appendChild(script)
   }
@@ -19,7 +17,7 @@ export default class Landing extends Component {
       <div className='landing-page'>
         <canvas className='canvas'></canvas>
         <div className='landing-element'>
-          <ShowAt breakpoint='large'>
+          <ShowAt breakpoint='largeAndAbove'>
             <h2 className='desktop'>Pssst. Click and drag below!</h2>
           </ShowAt>
           <ShowAt breakpoint='mediumAndBelow'>

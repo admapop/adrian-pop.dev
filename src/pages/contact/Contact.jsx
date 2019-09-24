@@ -68,10 +68,9 @@ export default class Contact extends Component {
             <div className='contact-form-button'><input type="submit" value="SEND" id="submit" /></div>
           </form>
           <br/>
-          <p>If you prefer to contact me directly, send your Email to:</p>
-          <p>You can also check out my résumé.</p>
+          <p>If you prefer to contact me directly, send your Email to: <a href="mailto: hello@adrian-pop.dev">hello@adrian-pop.dev</a></p>
         </div>
-          <SocialBar mobile={true} location={match.url} />
+        <SocialBar mobile={true} location={match.url} />
       </div>
     )
   }
